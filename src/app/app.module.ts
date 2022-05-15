@@ -9,6 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,11 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatFormFieldModule, 
+    MatFormFieldModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatInputModule,    
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

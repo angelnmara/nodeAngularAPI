@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DealerService {
-  private basePath = environment.apiUrl.concat('brand')
+  private basePath = environment.apiUrl.concat('dealers')
   
   constructor(private http:HttpClient) { }
 
