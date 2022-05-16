@@ -36,17 +36,17 @@
         <hr>
         <section>
             <div class="example-button-row">
-                <button mat-raised-button color="warn" (click)="returnToList()">Cancelar</button>
-                <button mat-raised-button color="accent" (click)="cleanDealer()">Limpiar</button>
+                <button mat-raised-button color="warn" (click)="returnToList()">Cancelar</button>&nbsp;
+                <button mat-raised-button color="accent" (click)="cleanDealer()">Limpiar</button>&nbsp;
                 <button mat-raised-button color="primary" [disabled]="!validaObligatorios(proveedor)" (click)="saveDealer()">Registrar</button>
             </div>
         </section>
     </div>
 
     <div class="card" [hidden]="!showList">
-        <span class="title-card">Lista de proveedor</span>
+        <span class="title-card">Lista de proveedor</span><br>
         <mat-form-field appearance="standard">
-            <mat-label>Filter</mat-label>
+            <mat-label>Filtro</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
           </mat-form-field>
         <div class="sec-table">
