@@ -15,8 +15,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +31,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule, 
+    MatIconModule,
     MatPaginatorModule
   ],
   providers: [],

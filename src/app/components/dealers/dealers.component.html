@@ -17,8 +17,7 @@
             <form class="example-form">
                 <mat-form-field class="w-p-95">
                     <mat-label>Nombre del proveedor</mat-label>
-                    <input matInput placeholder="Escribe el nombre" [(ngModel)]="proveedor.name" name="name"
-                        required>
+                    <input matInput placeholder="Escribe el nombre" [(ngModel)]="proveedor.name" name="name" required>
                 </mat-form-field>
                 <mat-form-field class="w-p-95">
                     <mat-label>Nombre la dirección del proovedor</mat-label>
@@ -27,8 +26,7 @@
                 </mat-form-field>
                 <mat-form-field class="w-p-95">
                     <mat-label>Año de alta</mat-label>
-                    <input matInput placeholder="Escribe el año" [(ngModel)]="proveedor.year" name="year"
-                        required>
+                    <input matInput placeholder="Escribe el año" [(ngModel)]="proveedor.year" name="year" required>
                 </mat-form-field>
             </form>
 
@@ -38,7 +36,8 @@
             <div class="example-button-row">
                 <button mat-raised-button color="warn" (click)="returnToList()">Cancelar</button>&nbsp;
                 <button mat-raised-button color="accent" (click)="cleanDealer()">Limpiar</button>&nbsp;
-                <button mat-raised-button color="primary" [disabled]="!validaObligatorios(proveedor)" (click)="saveDealer()">Registrar</button>
+                <button mat-raised-button color="primary" [disabled]="!validaObligatorios(proveedor)"
+                    (click)="saveDealer()">Registrar</button>
             </div>
         </section>
     </div>
@@ -48,7 +47,7 @@
         <mat-form-field appearance="standard">
             <mat-label>Filtro</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
-          </mat-form-field>
+        </mat-form-field>
         <div class="sec-table">
             <table mat-table [dataSource]="dataSource" class=" full-width" matSort>
                 <ng-container matColumnDef="id">
