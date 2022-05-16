@@ -11,6 +11,10 @@ import { MatTableModule } from '@angular/material/table';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input'
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+
 
 @NgModule({
   declarations: [
@@ -25,8 +29,10 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatTableModule,
     HttpClientModule,
-    MatInputModule,    
-    FormsModule
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

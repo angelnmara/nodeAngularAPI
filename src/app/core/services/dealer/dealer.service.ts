@@ -8,12 +8,13 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DealerService {
-  private basePath = environment.apiUrl.concat('dealers')
-  
+  private basePathAll = environment.apiUrl.concat('dealers')
+  private basePath = environment.apiUrl.concat('dealer')
+
   constructor(private http:HttpClient) { }
 
   getDealers(){
-    return this.http.get<Dealer[]>(this.basePath, {
+    return this.http.get<Dealer[]>(this.basePathAll, {
       headers: new HttpHeaders({
         'Content-type': 'application/json; charset=utf-8',
         'Access-Control-Allow-Headers':'Content-Type'
