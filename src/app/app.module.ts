@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input'
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -32,7 +33,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     FormsModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule, 
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

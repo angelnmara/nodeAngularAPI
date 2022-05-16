@@ -45,22 +45,26 @@
 
     <div class="card" [hidden]="!showList">
         <span class="title-card">Lista de proveedor</span>
+        <mat-form-field appearance="standard">
+            <mat-label>Filter</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+          </mat-form-field>
         <div class="sec-table">
-            <table mat-table [dataSource]="dataSource" class=" full-width">
+            <table mat-table [dataSource]="dataSource" class=" full-width" matSort>
                 <ng-container matColumnDef="id">
-                    <th mat-header-cell *matHeaderCellDef> Id </th>
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
                     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
                 </ng-container>
                 <ng-container matColumnDef="name">
-                    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
                     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
                 </ng-container>
                 <ng-container matColumnDef="addres">
-                    <th mat-header-cell *matHeaderCellDef> Dirección </th>
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Dirección </th>
                     <td mat-cell *matCellDef="let element"> {{element.addres}} </td>
                 </ng-container>
                 <ng-container matColumnDef="year">
-                    <th mat-header-cell *matHeaderCellDef> Año </th>
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Año </th>
                     <td mat-cell *matCellDef="let element"> {{element.year}} </td>
                 </ng-container>
 
@@ -81,6 +85,7 @@
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
         </div>
     </div>
 </div>

@@ -22,7 +22,7 @@ export class DealerService {
     }).pipe(map((res)=>res));
   }
 
-  getDealerById(id:number){
+  getDealerById(id:string){
     return this.http.get<Dealer>(`${this.basePath}/${id}`, {
       headers: new HttpHeaders({
         'Content-type': 'application/json; charset=utf-8',
@@ -40,7 +40,7 @@ export class DealerService {
     }).pipe(map((res)=>res));
   }
 
-  deleteDealer(id:number){
+  deleteDealer(id:string){
     return this.http.delete<Object>(`${this.basePath}/${id}`, {
       headers: new HttpHeaders({
         'Content-type': 'application/json; charset=utf-8',
