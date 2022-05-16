@@ -1,5 +1,7 @@
 # Ejecutar
-Para ejecutar el proyecto solo se descarga y se ejecuta ng serve --open
+Para ejecutar el proyecto solo se descarga y se ejecuta:
+npm install
+ng serve --open
 
 # AngulaNode
 
